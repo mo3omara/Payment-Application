@@ -1,0 +1,5 @@
+﻿  server.c
+C:\Users\MY-lenovo\source\repos\PROJECT ATM\PROJECT ATM\server.c(18,32): warning C4047: 'function': 'ST_transaction_t *' differs in levels of indirection from 'ST_transaction_t **'
+C:\Users\MY-lenovo\source\repos\PROJECT ATM\PROJECT ATM\server.c(18,22): warning C4024: 'saveTransaction': different types for formal and actual parameter 1
+C:\Users\MY-lenovo\source\repos\PROJECT ATM\PROJECT ATM\server.c(32,59): warning C4047: '!=': 'int' differs in levels of indirection from 'void *'
+  PROJECT ATM.vcxproj -> C:\Users\MY-lenovo\source\repos\PROJECT ATM\Debug\PROJECT ATM.exe

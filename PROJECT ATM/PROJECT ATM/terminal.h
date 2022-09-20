@@ -1,0 +1,35 @@
+#ifndef terminal_H_INCLUDED
+#define terminal_H_INCLUDED
+
+#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_NONSTDC_NO_WARNINGS
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <string.h>
+#include <time.h>
+#include "card.h"
+
+typedef enum EN_terminalError_t
+{
+	OK2, WRONG_DATE, EXPIRED_CARD, INVALID_CARD, INVALID_AMOUNT, EXCEED_MAX_AMOUNT, INVALID_MAX_AMOUNT
+}EN_terminalError_t;
+
+typedef struct ST_terminalData_t
+{
+	float transAmount;
+	float maxTransAmount;
+	unsigned char transactionDate[11];
+}ST_terminalData_t;
+
+
+EN_terminalError_t getTransactionDate(ST_terminalData_t *termData);
+EN_terminalError_t isCardExpired(ST_cardData_t cardData, ST_terminalData_t termData);
+EN_terminalError_t isValidCardPAN(ST_cardData_t *cardData);
+EN_terminalError_t getTransactionAmount(ST_terminalData_t *termData);
+EN_terminalError_t isBelowMaxAmount(ST_terminalData_t *termData);
+EN_terminalError_t setMaxAmount(ST_terminalData_t *termData);
+
+
+#endif
